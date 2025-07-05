@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 class ThreadPoolHttpServer:
     """HTTP Server with Thread Pool for concurrent request handling"""
     
-    def __init__(self, bind_host='0.0.0.0', bind_port=8889, thread_count=8, request_queue_size=25):
+    def __init__(self, bind_host='0.0.0.0', bind_port=7777, thread_count=8, request_queue_size=25):
         self.bind_address = bind_host
         self.bind_port = bind_port
         self.thread_count = thread_count
@@ -206,7 +206,7 @@ def main():
     
     parser = argparse.ArgumentParser(description='Thread Pool HTTP Server')
     parser.add_argument('--host', default='0.0.0.0', help='Server bind address')
-    parser.add_argument('--port', type=int, default=8890, help='Server port number')
+    parser.add_argument('--port', type=int, default=7777, help='Server port number')
     parser.add_argument('--threads', type=int, default=8, help='Number of worker threads')
     parser.add_argument('--queue-size', type=int, default=25, help='Request queue size')
     

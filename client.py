@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 # Server configuration
 TARGET_HOST = '172.16.16.101'
-TARGET_PORT = 8890
+TARGET_PORT = 7777
 
 class FileTransferClient:
     """HTTP client for file transfer operations"""
@@ -23,7 +23,7 @@ class FileTransferClient:
         self.server_port = port
         self.connection_timeout = 15
         
-    def establish_connection(self, target_host='172.16.16.101', target_port=13000):
+    def establish_connection(self, target_host='172.16.16.101', target_port=7777):
         """Create socket connection to server"""
         try:
             client_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

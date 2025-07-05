@@ -106,7 +106,7 @@ def handle_client_connection(client_socket, client_address, processor, worker_id
 class ProcessPoolHttpServer:
     """HTTP Server using process pool for concurrent connection handling"""
     
-    def __init__(self, bind_host='0.0.0.0', bind_port=8889, process_count=4):
+    def __init__(self, bind_host='0.0.0.0', bind_port=7777, process_count=4):
         self.bind_address = bind_host
         self.bind_port = bind_port
         self.process_count = process_count
@@ -249,7 +249,7 @@ def main():
     
     parser = argparse.ArgumentParser(description='Process Pool HTTP Server')
     parser.add_argument('--host', default='0.0.0.0', help='Server bind address')
-    parser.add_argument('--port', type=int, default=8890, help='Server port number')
+    parser.add_argument('--port', type=int, default=7777, help='Server port number')
     parser.add_argument('--processes', type=int, default=4, help='Number of worker processes')
     
     args = parser.parse_args()
